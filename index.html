@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Murecho:wght@100..900&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class='cursor' id="cursor"></div>
+    <header>
+        <div class="language-bar">
+            <button lang="en">EN</button>
+            <button lang="ru">RU</button>
+        </div>
+    </header>
+    <div class="main-content">
+        <div class="filter-bar">
+            <button class="active" filter="all">All</button>
+            <button class="not-active" filter="std">STD</button>
+            <button class="not-active" filter="ai">AI</button>
+            <button class="not-active" filter="gpt">GPT</button>
+            <button class="not-active" filter="artwork">Artwork</button>
+            <button class="not-active" filter="animation">Animation</button>
+            <button class="not-active" filter="web">Web</button>
+        </div>
+        <div class="services">
+            <!-- STD synths -->
+            <div class="service-box" filter="std">
+                <h2>Standart synths</h2>
+                <ul class="service-list">
+                    <!-- UTAU -->
+                    <li class="service-card">
+                        <h3 class="service-name">UTAU</h3>
+                        <p class="service-desc">utsu vb</p>
+                        <ul class="service-species">
+                            <li>
+                                CV format
+                            </li>
+                            <li>
+                                CVVC format
+                            </li>
+                            <li>
+                                VCV format
+                            </li>
+                            <li>
+                                Any language
+                            </li>
+                        </ul>
+                        <audio controls class="audio-example">
+                            <source src="audio/utau_site_Track1.mp3" type="audio/mp3"> 
+                        </audio>
+                        <p class="example-comment">VCV voicebank</p>
+                        <div class="service-price">
+                            <h4 class="exact-price">0.03$ per oto entry</h4>
+                            <table class="avg-price">
+                                <tr>
+                                    <th>Format</th>
+                                    <th>Average price</th>
+                                </tr>
+                                <tr>
+                                    <td>CV (Japanese)</td>
+                                    <td>5$</td>
+                                </tr>
+                                <tr>
+                                    <td>CVVC (Japanese)</td>
+                                    <td>15$</td>
+                                </tr>
+                                <tr>
+                                    <td>VCV (Japanese)</td>
+                                    <td>30$</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <button class="iwant">
+                            I want that!
+                        </button>
+                    </li>
+                    <!-- DeepVocal -->
+                    <li class="service-card">
+                        <h3 class="service-name">DeepVocal</h3>
+                        <p class="service-desc">utsu vb</p>
+                        <ul class="service-species">
+                            <li>
+                                CV format
+                            </li>
+                            <li>
+                                CVVC format
+                            </li>
+                            <li>
+                                Any language
+                            </li>
+                        </ul>
+                        <audio controls class="audio-example">
+                            <source src="audio/deepvocal_site.mp3" type="audio/mp3"> 
+                        </audio>
+                        <p class="example-comment">CVVC voicebank</p>
+                        <div class="service-price">
+                            <h4 class="exact-price">0.04$ per entry</h4>
+                            <table class="avg-price">
+                                <tr>
+                                    <th>Format</th>
+                                    <th>Average price</th>
+                                </tr>
+                                <tr>
+                                    <td>CV (Japanese)</td>
+                                    <td>7$</td>
+                                </tr>
+                                <tr>
+                                    <td>CVVC (Japanese)</td>
+                                    <td>20$</td>
+                                </tr>
+                            </table>
+                            <button class="iwant">
+                                I want that!
+                            </button>
+                        </div>
+                    </li>
+                    <!-- Vocaloid -->
+                    <li class="service-card">
+                        <h3 class="service-name">Vocaloid</h3>
+                        <p class="service-desc">utsu vb</p>
+                        <ul class="service-species">
+                            <li>
+                                CV format
+                            </li>
+                            <li>
+                                CVVC format
+                            </li>
+                            <li>
+                                VCV format
+                            </li>
+                            <li>
+                                Any language
+                            </li>
+                        </ul>
+                        <audio controls class="audio-example">
+                            <source src="audio/vocaloid_site.mp3" type="audio/mp3"> 
+                        </audio>
+                        <p class="example-comment">VCV voicebank</p>
+                        <div class="service-price">
+                            <h4 class="exact-price">0.05$ per entry</h4>
+                            <table class="avg-price">
+                                <tr>
+                                    <th>Format</th>
+                                    <th>Average price</th>
+                                </tr>
+                                <tr>
+                                    <td>CV (Japanese)</td>
+                                    <td>8.5$</td>
+                                </tr>
+                                <tr>
+                                    <td>CVVC (Japanese)</td>
+                                    <td>25$</td>
+                                </tr>
+                                <tr>
+                                    <td>VCV (Japanese)</td>
+                                    <td>30$</td>
+                                </tr>
+                            </table>
+                            <button class="iwant">
+                                I want that!
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+            <p>
+                20% discount for every additional pitch for STD bank (UTAU, DeepVocal, Vocaloid)
+            </p>
+            </div>
+            <!-- AI synths -->
+            <div class="service-box" filter="ai">
+                <h2>AI synths</h2>
+                <ul class="service-list">
+                    <!-- HTK labeling -->
+                    <li class="service-card">
+                        <h3 class="service-name">HTK labeling</h3>
+                        <p class="service-desc">utsu vb</p>
+                        <ul class="service-species">
+                            <li>
+                                CV format
+                            </li>
+                            <li>
+                                CVVC format
+                            </li>
+                            <li>
+                                VCV format
+                            </li>
+                            <li>
+                                Any language
+                            </li>
+                        </ul>
+                        <audio controls class="audio-example">
+                            <source src="audio/utau_site_Track1.mp3" type="audio/mp3"> 
+                        </audio>
+                        <p class="example-comment">VCV voicebank</p>
+                        <div class="service-price">
+                            <h4 class="exact-price">0.004$ per label</h4>
+                            <table class="avg-price">
+                                <tr>
+                                    <th>Format</th>
+                                    <th>Average price</th>
+                                </tr>
+                                <tr>
+                                    <td>One song</td>
+                                    <td>1$</td>
+                                </tr>
+                                <tr>
+                                    <td>30-min dataset</td>
+                                    <td>20$</td>
+                                </tr>
+                            </table>
+                            <button class="iwant">
+                                I want that!
+                            </button>
+                        </div>
+                    </li>
+                    <!-- Vocoder -->
+                    <li class="service-card">
+                        <h3 class="service-name">Vocoder fine-tuning</h3>
+                        <p class="service-desc">utsu vb</p>
+                        <ul class="service-species">
+                            <li>
+                                CV format
+                            </li>
+                            <li>
+                                CVVC format
+                            </li>
+                            <li>
+                                VCV format
+                            </li>
+                            <li>
+                                Any language
+                            </li>
+                        </ul>
+                        <audio controls class="audio-example">
+                            <source src="audio/utau_site_Track1.mp3" type="audio/mp3"> 
+                        </audio>
+                        <p class="example-comment">VCV voicebank</p>
+                        <div class="service-price">
+                            <h4 class="exact-price">0.001$ per step</h4>
+                            <table class="avg-price">
+                                <tr>
+                                    <th>Format</th>
+                                    <th>Average price</th>
+                                </tr>
+                                <tr>
+                                    <td>6k steps</td>
+                                    <td>6$</td>
+                                </tr>
+                                <tr>
+                                    <td>10k steps</td>
+                                    <td>10$</td>
+                                </tr>
+                            </table>
+                            <button class="iwant">
+                                I want that!
+                            </button>
+                        </div>
+                    </li>
+                    <!-- Acoustic -->
+                    <li class="service-card">
+                        <h3 class="service-name">Acoustic model training</h3>
+                        <p class="service-desc">utsu vb</p>
+                        <ul class="service-species">
+                            <li>
+                                CV format
+                            </li>
+                            <li>
+                                CVVC format
+                            </li>
+                            <li>
+                                VCV format
+                            </li>
+                            <li>
+                                Any language
+                            </li>
+                        </ul>
+                        <audio controls class="audio-example">
+                            <source src="audio/utau_site_Track1.mp3" type="audio/mp3"> 
+                        </audio>
+                        <p class="example-comment">VCV voicebank</p>
+                        <div class="service-price">
+                            <h4 class="exact-price">0.005$ per step</h4>
+                            <table class="avg-price">
+                                <tr>
+                                    <th>Format</th>
+                                    <th>Average price</th>
+                                </tr>
+                                <tr>
+                                    <td>80k steps</td>
+                                    <td>40$</td>
+                                </tr>
+                                <tr>
+                                    <td>100k steps</td>
+                                    <td>50$</td>
+                                </tr>
+                            </table>
+                            <button class="iwant">
+                                I want that!
+                            </button>
+                        </div>
+                    
+                    </li>
+                    <!-- Variance -->
+                    
+                    <li class="service-card">
+                        <h3 class="service-name">Variance model training</h3>
+                        <p class="service-desc">utsu vb</p>
+                        <ul class="service-species">
+                            <li>
+                                CV format
+                            </li>
+                            <li>
+                                CVVC format
+                            </li>
+                            <li>
+                                VCV format
+                            </li>
+                            <li>
+                                Any language
+                            </li>
+                        </ul>
+                        <audio controls class="audio-example">
+                            <source src="audio/utau_site_Track1.mp3" type="audio/mp3"> 
+                        </audio>
+                        <p class="example-comment">VCV voicebank</p>
+                        <div class="service-price">
+                            <h4 class="exact-price">0.005$ per step</h4>
+                            <table class="avg-price">
+                                <tr>
+                                    <th>Format</th>
+                                    <th>Average price</th>
+                                </tr>
+                                <tr>
+                                    <td>80k steps</td>
+                                    <td>40$</td>
+                                </tr>
+                                <tr>
+                                    <td>100k steps</td>
+                                    <td>50$</td>
+                                </tr>
+                            </table>
+                            <button class="iwant">
+                                I want that!
+                            </button>
+                        </div>
+                    
+                    </li>
+                    <!-- RVC -->
+                    <li class="service-card">
+                        <h3 class="service-name">RVC model training</h3>
+                        <p class="service-desc">utsu vb</p>
+                        <ul class="service-species">
+                            <li>
+                                CV format
+                            </li>
+                            <li>
+                                CVVC format
+                            </li>
+                            <li>
+                                VCV format
+                            </li>
+                            <li>
+                                Any language
+                            </li>
+                        </ul>
+                        <audio controls class="audio-example">
+                            <source src="audio/utau_site_Track1.mp3" type="audio/mp3"> 
+                        </audio>
+                        <p class="example-comment">VCV voicebank</p>
+                        <div class="service-price">
+                            <h4 class="exact-price">0.2$ per epoch</h4>
+                            <table class="avg-price">
+                                <tr>
+                                    <th>Format</th>
+                                    <th>Average price</th>
+                                </tr>
+                                <tr>
+                                    <td>50 epochs</td>
+                                    <td>10$</td>
+                                </tr>
+                                <tr>
+                                    <td>100 epochs</td>
+                                    <td>20$</td>
+                                </tr>
+                            </table>
+                            <button class="iwant">
+                                I want that!
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+                <p>20% discount for both DiffSinger acoustic and variance training.</p>
+            </div>
+        </div>
+    <!-- Credentials -->
+
+    <div class="credentials" id="creds"><h2>Credentials</h2></div>
+    </div>
+    <script src="base.js"></script>
+</body>
+</html>
