@@ -15,7 +15,10 @@
     <header>
         <div class="language-bar">
             <button lang="en">EN</button>
+            <button lang="fr">FR</button>
+            <button lang="ja">JA</button>
             <button lang="ru">RU</button>
+            <button lang="ua">UA</button>
         </div>
     </header>
     <div class="main-content">
@@ -36,7 +39,7 @@
                     <!-- UTAU -->
                     <li class="service-card">
                         <h3 class="service-name">UTAU</h3>
-                        <p class="service-desc">utsu vb</p>
+                        <p class="service-desc">UTAU voicebank configuration; you need to send your recordings and reclist (optional).</p>
                         <ul class="service-species">
                             <li>
                                 CV format
@@ -83,7 +86,7 @@
                     <!-- DeepVocal -->
                     <li class="service-card">
                         <h3 class="service-name">DeepVocal</h3>
-                        <p class="service-desc">utsu vb</p>
+                        <p class="service-desc">DeepVocal voicebank configuration; you need to send your recordings and reclist (optional). </p>
                         <ul class="service-species">
                             <li>
                                 CV format
@@ -123,7 +126,7 @@
                     <!-- Vocaloid -->
                     <li class="service-card">
                         <h3 class="service-name">Vocaloid</h3>
-                        <p class="service-desc">utsu vb</p>
+                        <p class="service-desc">Vocaloid voicebank configuration; you need to send your recordings and reclist (optional). Some of the languages aren't implemented in Vocaloid 4 editor, so you'll need a <a href="https://github.com/ksauxion/vocadict">VocaDict</a> plugin to use them.</p>
                         <ul class="service-species">
                             <li>
                                 CV format
@@ -142,6 +145,7 @@
                             <source src="audio/vocaloid_site.mp3" type="audio/mp3"> 
                         </audio>
                         <p class="example-comment">VCV voicebank</p>
+                        
                         <div class="service-price">
                             <h4 class="exact-price">0.05$ per entry</h4>
                             <table class="avg-price">
@@ -179,25 +183,15 @@
                     <!-- HTK labeling -->
                     <li class="service-card">
                         <h3 class="service-name">HTK labeling</h3>
-                        <p class="service-desc">utsu vb</p>
+                        <p class="service-desc">HTK labeling for ENUNU/NNSVS, Diffsinger or any other program; you need to send clean audio data</p>
                         <ul class="service-species">
                             <li>
-                                CV format
-                            </li>
-                            <li>
-                                CVVC format
-                            </li>
-                            <li>
-                                VCV format
+                                HTK format
                             </li>
                             <li>
                                 Any language
                             </li>
                         </ul>
-                        <audio controls class="audio-example">
-                            <source src="audio/utau_site_Track1.mp3" type="audio/mp3"> 
-                        </audio>
-                        <p class="example-comment">VCV voicebank</p>
                         <div class="service-price">
                             <h4 class="exact-price">0.004$ per label</h4>
                             <table class="avg-price">
@@ -222,25 +216,18 @@
                     <!-- Vocoder -->
                     <li class="service-card">
                         <h3 class="service-name">Vocoder fine-tuning</h3>
-                        <p class="service-desc">utsu vb</p>
+                        <p class="service-desc">HiFiGAN vocoder finetuning on your audio data; you need to send clean audio data</p>
                         <ul class="service-species">
                             <li>
-                                CV format
+                                No labeling
                             </li>
                             <li>
-                                CVVC format
-                            </li>
-                            <li>
-                                VCV format
+                                Finetuning
                             </li>
                             <li>
                                 Any language
                             </li>
                         </ul>
-                        <audio controls class="audio-example">
-                            <source src="audio/utau_site_Track1.mp3" type="audio/mp3"> 
-                        </audio>
-                        <p class="example-comment">VCV voicebank</p>
                         <div class="service-price">
                             <h4 class="exact-price">0.001$ per step</h4>
                             <table class="avg-price">
@@ -264,26 +251,32 @@
                     </li>
                     <!-- Acoustic -->
                     <li class="service-card">
-                        <h3 class="service-name">Acoustic model training</h3>
-                        <p class="service-desc">utsu vb</p>
+                        <h3 class="service-name">Diffsinger acoustic model training</h3>
+                        <p class="service-desc">Diffsinger acoustic model training, including gender, velocity, energy and breathiness parameters; you need to send labels and clean singing data</p>
                         <ul class="service-species">
                             <li>
-                                CV format
+                                Diffsinger
                             </li>
                             <li>
-                                CVVC format
+                                Gender parameter
                             </li>
                             <li>
-                                VCV format
+                                Velocity parameter
+                            </li>
+                            <li>
+                                Energy parameter
+                            </li>
+                            <li>
+                                Breathiness parameter
                             </li>
                             <li>
                                 Any language
                             </li>
                         </ul>
                         <audio controls class="audio-example">
-                            <source src="audio/utau_site_Track1.mp3" type="audio/mp3"> 
+                            <source src="audio/diffsinger.mp3" type="audio/mp3"> 
                         </audio>
-                        <p class="example-comment">VCV voicebank</p>
+                        <p class="example-comment">Japanese acoustic model</p>
                         <div class="service-price">
                             <h4 class="exact-price">0.005$ per step</h4>
                             <table class="avg-price">
@@ -310,25 +303,34 @@
                     
                     <li class="service-card">
                         <h3 class="service-name">Variance model training</h3>
-                        <p class="service-desc">utsu vb</p>
+                        <p class="service-desc">Diffsinger variance model training, including pitch, duration, energy and breathiness prediction features; you need to send labels and clean singing data</p>
                         <ul class="service-species">
                             <li>
-                                CV format
+                                Diffsinger
                             </li>
                             <li>
-                                CVVC format
+                                Pitch prediction
                             </li>
                             <li>
-                                VCV format
+                                Duration prediction
+                            </li>
+                            <li>
+                                Energy prediction
+                            </li>
+                            <li>
+                                Breathiness prediction
+                            </li>
+                            <li>
+                                Pitch expressiveness parameter
                             </li>
                             <li>
                                 Any language
                             </li>
                         </ul>
                         <audio controls class="audio-example">
-                            <source src="audio/utau_site_Track1.mp3" type="audio/mp3"> 
+                            <source src="audio/diffsinger.mp3" type="audio/mp3"> 
                         </audio>
-                        <p class="example-comment">VCV voicebank</p>
+                        <p class="example-comment">Pitch, energy, duration and breathiness predicted</p>
                         <div class="service-price">
                             <h4 class="exact-price">0.005$ per step</h4>
                             <table class="avg-price">
@@ -351,28 +353,56 @@
                         </div>
                     
                     </li>
+                    <!-- G2p -->
+                    <li class="service-card">
+                        <h3 class="service-name">G2p model training</h3>
+                        <p class="service-desc">OpenUtau G2p (grapheme-to-phoneme) model training; you need to send a language the phonemizer is for</p>
+                        <ul class="service-species">
+                            <li>
+                                OpenUtau
+                            </li>
+                            <li>
+                                Any language
+                            </li>
+                        </ul>
+                        <div class="service-price">
+                            <h4 class="exact-price">0.2$ per epoch</h4>
+                            <table class="avg-price">
+                                <tr>
+                                    <th>Format</th>
+                                    <th>Average price</th>
+                                </tr>
+                                <tr>
+                                    <td>50 epochs</td>
+                                    <td>10$</td>
+                                </tr>
+                                <tr>
+                                    <td>100 epochs</td>
+                                    <td>20$</td>
+                                </tr>
+                            </table>
+                            <button class="iwant">
+                                I want that!
+                            </button>
+                        </div>
+                    
+                    </li>
                     <!-- RVC -->
                     <li class="service-card">
                         <h3 class="service-name">RVC model training</h3>
-                        <p class="service-desc">utsu vb</p>
+                        <p class="service-desc">Retrieval Voice Conversion model training; you need to send your audio data</p>
                         <ul class="service-species">
                             <li>
-                                CV format
-                            </li>
-                            <li>
-                                CVVC format
-                            </li>
-                            <li>
-                                VCV format
+                                No labeling
                             </li>
                             <li>
                                 Any language
                             </li>
                         </ul>
                         <audio controls class="audio-example">
-                            <source src="audio/utau_site_Track1.mp3" type="audio/mp3"> 
+                            <source src="audio/rvc.mp3" type="audio/mp3"> 
                         </audio>
-                        <p class="example-comment">VCV voicebank</p>
+                        <p class="example-comment">Tohoku Kiritan RVC</p>
                         <div class="service-price">
                             <h4 class="exact-price">0.2$ per epoch</h4>
                             <table class="avg-price">
@@ -397,10 +427,409 @@
                 </ul>
                 <p>20% discount for both DiffSinger acoustic and variance training.</p>
             </div>
+            <!-- GPT -->
+            <div class="service-box" filter="gpt">
+                <h2>GPT models</h2>
+                <ul class="service-list">
+                    <!-- GPT -->
+                    <li class="service-card">
+                        <h3 class="service-name">GPT model training</h3>
+                        <p class="service-desc">Autotrain zephyr-7b-beta model finetuning; you need to send a sheet with questions and responses of the future model (>100) or I'll make it by myself for additional price</p>
+                        <ul class="service-species">
+                            <li>
+                                Sheet data
+                            </li>
+                            <li>
+                                GPT
+                            </li>
+                            <li>
+                                Autotrain
+                            </li>
+                        </ul>
+                        <div class="service-price">
+                            <h4 class="exact-price">0.3$ per epoch</h4>
+                            <h4 class="exact-price">0.03$ per sheet line</h4>
+                            <table class="avg-price">
+                                <tr>
+                                    <th>Format</th>
+                                    <th>Average price</th>
+                                </tr>
+                                <tr>
+                                    <td>500 epochs</td>
+                                    <td>15$</td>
+                                </tr>
+                                <tr>
+                                    <td>1000 epochs</td>
+                                    <td>30$</td>
+                                </tr>
+                                <tr>
+                                    <td>100 sheet lines</td>
+                                    <td>3$</td>
+                                </tr>
+                                <tr>
+                                    <td>1000 sheet lines</td>
+                                    <td>30$</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <button class="iwant">
+                            I want that!
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <!-- Artwork -->
+            <div class="service-box" filter="artwork">
+                <h2>Artwork</h2>
+                <ul class="service-list">
+                    <!-- Semi realism -->
+                    <li class="service-card">
+                        <h3 class="service-name">Cartoonish style</h3>
+                        <p class="service-desc">Drawing of your character in cartoonish style</p>
+                        <ul class="service-species">
+                            <li>
+                                Character drawing
+                            </li>
+                            <li>
+                                Carttonish style
+                            </li>
+                            <li>
+                                Anime style
+                            </li>
+                        </ul>
+
+                        <div class="service-price">
+                            <table class="avg-price">
+                                <tr>
+                                    <th></th>
+                                    <th>Sketch</th>
+                                    <th>Line art</th>
+                                    <th>Flat color</th>
+                                    <th>Rendered</th>
+                                </tr>
+                                <tr>
+                                    <th>Head</th>
+                                    <td>5$</td>
+                                    <td>8$</td>
+                                    <td>10$</td>
+                                    <td>12$</td>
+                                </tr>
+                                <tr>
+                                    <th>Half-body</th>
+                                    <td>8$</td>
+                                    <td>15$</td>
+                                    <td>20$</td>
+                                    <td>25$</td>
+                                </tr>
+                                <tr>
+                                    <th>Full body</th>
+                                    <td>12$</td>
+                                    <td>25$</td>
+                                    <td>30$</td>
+                                    <td>35$</td>
+                                </tr>
+                                
+                            </table>
+                            <p>
+                                Background + 5$
+                            </p>
+                            <p>Additional character - +80%</p>
+                        </div>
+                        
+                        <button class="iwant">
+                            I want that!
+                        </button>
+                    </li>
+                    <li class="service-card">
+                        <h3 class="service-name">Semi-realistic style</h3>
+                        <p class="service-desc">Drawing of your character in semi-realistic style</p>
+                        <ul class="service-species">
+                            <li>
+                                Character drawing
+                            </li>
+                            <li>
+                                Semi-realism
+                            </li>
+                        </ul>
+                        <p class="example-comment">VCV voicebank</p>
+                        <div class="service-price">
+                            <table class="avg-price">
+                                <tr>
+                                    <th></th>
+                                    <th>Sketch</th>
+                                    <th>Monochromatic</th>
+                                    <th>Colored</th>
+                                </tr>
+                                <tr>
+                                    <th>Head</th>
+                                    <td>8$</td>
+                                    <td>15$</td>
+                                    <td>20$</td>
+                                </tr>
+                                <tr>
+                                    <th>Half-body</th>
+                                    <td>12$</td>
+                                    <td>20$</td>
+                                    <td>30$</td>
+                                </tr>
+                                <tr>
+                                    <th>Full body</th>
+                                    <td>15$</td>
+                                    <td>30$</td>
+                                    <td>40$</td>
+                                </tr>
+                                
+                            </table>
+                            <p>
+                                Background + 10$
+                            </p>
+                            <p>Additional character - +80%</p>
+                        </div>
+                        
+                        <button class="iwant">
+                            I want that!
+                        </button>
+                    </li>
+                    <!-- Emotions -->
+                    <li class="service-card">
+                        <h3 class="service-name">Stickers/emotions</h3>
+                        <p class="service-desc">A pack of stickers/emotions in cartoonish style</p>
+                        <ul class="service-species">
+                            <li>
+                                Stickers/emotions
+                            </li>
+                            <li>
+                                Cartoonish style
+                            </li>
+                            <li>
+                                Anime style
+                            </li>
+                        </ul>
+                        <div class="service-price">
+                            <h4>2$ per emotion</h4>
+                        </div>
+                        <button class="iwant">
+                            I want that!
+                        </button>
+                        </li>
+                </ul>
+            
+            </div>
+            <!-- Animation -->
+            <div class="service-box" filter="animation">
+                <h2>Animation</h2>
+                <ul class="service-list">
+                    <!-- l2d -->
+                    <li class="service-card">
+                        <h3 class="service-name">Live2D model</h3>
+                        <p class="service-desc">Live2D model rigging and VTube Studio setup</p>
+                        <ul class="service-species">
+                            <li>
+                                Live2D
+                            </li>
+                            <li>
+                                VTube studio
+                            </li>
+                            <li>
+                                Vtubing
+                            </li>
+                        </ul>
+                        <div class="service-price">
+                            <table class="avg-price">
+                                <tr>
+                                    <th></th>
+                                    <th>Illustration</th>
+                                    <th>Rig</th>
+                                </tr>
+                                <tr>
+                                    <th>Head</th>
+                                    <td>25$</td>
+                                    <td>30$</td>
+                                </tr>
+                                <tr>
+                                    <th>Half-body</th>
+                                    <td>35$</td>
+                                    <td>40$</td>
+                                </tr>
+                                <tr>
+                                    <th>Full body</th>
+                                    <td>40$</td>
+                                    <td>45$</td>
+                                </tr>
+                                </table>
+                        </div>
+                        <button class="iwant">
+                            I want that!
+                        </button>
+                    </li>
+                    <!-- animated gif -->
+                    <li class="service-card">
+                        <h3 class="service-name">Simple animation</h3>
+                        <p class="service-desc">Simple animation in simplified cartoonish style</p>
+                        <ul class="service-species">
+                            <li>
+                                Cartoonish style
+                            </li>
+                            <li>
+                                Short animation
+                            </li>
+                        </ul>
+                        <div class="service-price">
+                            <h4>10$ for animation</h4>
+                        </div>
+                        <button class="iwant">
+                            I want that!
+                        </button>
+                    </li>
+                    <!-- Animated emojis -->
+                    <li class="service-card">
+                        <h3 class="service-name">Animated emotions</h3>
+                        <p class="service-desc">A pack of animated stickers/emotions in cartoonish style</p>
+                        <ul class="service-species">
+                            <li>
+                                Short animation
+                            </li>
+                            <li>
+                                Cartoonish style
+                            </li>
+                            <li>
+                                Anime style
+                            </li>
+                            <li>
+                                Stickers/emotions
+                            </li>
+                        </ul>
+                        <div class="service-price">
+                            <h4>3$ per emotion</h4>
+                        </div>
+                        <button class="iwant">
+                            I want that!
+                        </button>
+                    </li>
+                    
+                </ul>
+            </div>
+            <!-- Web -->
+            <div class="service-box" filter="web">
+                <h2>Web</h2>
+                <ul class="service-list">
+                    <!-- web deisgn -->
+                    <li class="service-card">
+                        <h3 class="service-name">Website design</h3>
+                        <p class="service-desc">A design for your website</p>
+                        <ul class="service-species">
+                            <li>
+                                Web design
+                            </li>
+                            <li>
+                                Figma
+                            </li>
+                            <li>
+                                Frontend
+                            </li>
+                        </ul>
+                        <div class="service-price">
+                            <table class="avg-price">
+                                <tr>
+                                    <th>Desktop</th>
+                                    <th>All screens</th>
+                                </tr>
+                                <tr>
+                                    <td>10$</td>
+                                    <td>20$</td>
+                                </tr>
+                                </table>
+                        </div>
+                        <button class="iwant">
+                            I want that!
+                        </button>
+                    </li>
+                    <!-- html -->
+                    <li class="service-card">
+                        <h3 class="service-name">Website making</h3>
+                        <p class="service-desc">Simple code (HTML, CSS, JS) for your website</p>
+                        <ul class="service-species">
+                            <li>
+                                HTML
+                            </li>
+                            <li>
+                                CSS
+                            </li>
+                            <li>
+                                JS
+                            </li>
+                            <li>
+                                Coding
+                            </li>
+                            <li>
+                                Backend
+                            </li>
+                        </ul>
+                        <div class="service-price">
+                            <table class="avg-price">
+                                <tr>
+                                    <th>Desktop</th>
+                                    <th>All screens</th>
+                                </tr>
+                                <tr>
+                                    <td>10$</td>
+                                    <td>20$</td>
+                                </tr>
+                                </table>
+                        </div>
+                        <button class="iwant">
+                            I want that!
+                        </button>
+                    </li>
+                    
+                </ul>
+            </div>
         </div>
     <!-- Credentials -->
 
     <div class="credentials" id="creds"><h2>Credentials</h2></div>
+    <table class="credentials">
+        <tr>
+            <th>Method</th>
+            <th>Credential</th>
+        </tr>
+        <tr>
+            <td>USDT TRC-20</td>
+            <td>TU3vq3DddE6tsPjhh6D9Cps4WtFQCb1pvG</td>
+        </tr>
+        <tr>
+            <td>TRX</td>
+            <td>TU3vq3DddE6tsPjhh6D9Cps4WtFQCb1pvG</td>
+        </tr>
+        <tr>
+            <td>BTC</td>
+            <td>bc1q7gwrgyc625qk3askhrtsy9lnen7ue5ehz54uun</td>
+        </tr>
+        <tr>
+            <td>ETH</td>
+            <td>0x0aB64549829789aD04E9d0A61De35e2b8BBdfD5C</td>
+        </tr>
+        <tr>
+            <td>Solana</td>
+            <td>9qaG7Gpa2xLXwtMLdmporgzejp3kap1Dc74SX9yutXQW</td>
+        </tr>
+        <tr>
+            <td>Dogecoin</td>
+            <td>DU3uyMWeU3vf2eHudBnE4JsacWCPgXFQFL</td>
+        </tr>
+        <tr>
+            <td>Litecoin</td>
+            <td>ltc1qq33wuj0wkdtldt09p95eygmyyju4f2mjfka47p</td>
+        </tr>
+        <tr>
+            <td>TON</td>
+            <td>UQA0VckDoZSyU-SKRAImHmSI8JMcynlCRpIf57pxaI2Y4aXG</td>
+        </tr>
+        <tr>
+            <td>PayPal</td>
+            <td>I do not recommend it, since there'll be a 15% fee, but if you really want to use this method, contact me. It may take a while since I'm using an intermediary to get paid this way</td>
+        </tr>
+    </table>
     </div>
     <script src="base.js"></script>
 </body>

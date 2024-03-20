@@ -1,6 +1,7 @@
 //filters
-const filters=document.querySelectorAll('.filter-bar > button')
-const servbox=document.querySelectorAll(".service-box")
+function filterf(buttons,items){
+const filters=document.querySelectorAll(buttons)
+const servbox=document.querySelectorAll(items)
 filters.forEach(function(button) {
     button.addEventListener("click", function() {
         for(ff of servbox){
@@ -22,7 +23,7 @@ filters.forEach(function(button) {
                     c.classList.add('active')
                     console.log(c.getAttribute("filter"))
                     //console.log('filter['+c.getAttribute("filter")+']')
-                    const ddd=document.querySelectorAll(".service-box[filter="+c.getAttribute("filter")+"]")
+                    const ddd=document.querySelectorAll(items+"[filter="+c.getAttribute("filter")+"]")
                     console.log(ddd)
                     for (let el of ddd){
                         console.log(el)
@@ -43,17 +44,35 @@ filters.forEach(function(button) {
         }
     });
   });
+}
 
 
+
+function cursor(){
   var cursor = document.getElementById("cursor");
   document.body.addEventListener("mousemove", function(e) {
     cursor.style.left = e.clientX + "px",
       cursor.style.top = e.clientY + "px";
   });
+}
 
-  const to_cred=document.querySelectorAll(".iwant")
+
+
+function to_cred(sel,idd){
+  const to_cred=document.querySelectorAll(sel)
   to_cred.forEach(function(button) {
       button.addEventListener("click", function() {
-        document.getElementById("creds").scrollIntoView();
+        document.getElementById(idd).scrollIntoView();
       });
     });
+}
+
+function langsw(){
+    console.log("it's empty here")
+}
+
+
+
+filterf('.filter-bar > button',".service-box");
+cursor();
+to_cred(".iwant","creds");
